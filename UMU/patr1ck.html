@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<div class="topnav">
+  <a class="active" href="About.html">Home</a>
+  <a href="Pavo.html">My Work</a>
+  <a href="contact.html">Location</a>
+  <a href="home.html">About</a>
+</div>
+<h1>Welcome To Print Hub Uganda</h1>
+<p1>Print Hub Stationery!Your one-stop-shop for all your printing needs.</p>
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <img src="IMG-20240417-WA0066.jpg">
+<div class="table"><td>D CEO</td>
+<td>:</td>
+<td>Nakanjako Shak1rah</td>
+</tr></div>
+</div>
+<div class="mySlides fade">
+  <img src="IMG-20220416-WA0008.jpg">
+<div class="table"><tr>
+<td>CEO</td>
+<td>:</td>
+<td>Wal1ggo Patr1ck</td> 
+</tr>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span>  
+</div>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>
